@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+blogs = [
+  { title: "test1", body: "testtesttesttest"},
+  { title: "test2", body: "testtesttesttest"},
+  { title: "test3", body: "testtesttesttest"}
+]
+
+blogs.each do |blog|
+  Blog.create!(
+    title: blog[:title],
+    body: blog[:body],
+    )
+end
+
