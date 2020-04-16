@@ -18,12 +18,16 @@ class GenresController < ApplicationController
   end
 
   def edit
+    @genre = Genre.find(params[:id])
   end
 
   def update
   end
 
   def destroy
+    @genre = Genre.find(params[:id])
+    @genre.destroy
+    redirect_to genres_path
   end
 
   private

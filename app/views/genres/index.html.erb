@@ -1,4 +1,7 @@
 <h1>ジャンル一覧</h1>
+<p><%= link_to "ジャンルを作成する", new_genre_path %></p>
 <% @genres.each do |genre| %>
 <%= genre.name %>
+<%= link_to "削除", genre_path(genre.id), method: :delete, data: {confirm: "このタスクを削除しますか？"} %>
+<%= link_to "編集", edit_genre_path(genre.id) %>
 <% end %>
