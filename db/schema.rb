@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_15_094008) do
+ActiveRecord::Schema.define(version: 2020_04_17_165407) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2020_04_15_094008) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "genre_id"
+    t.index ["genre_id"], name: "index_tasks_on_genre_id"
   end
 
   create_table "users", force: :cascade do |t|
